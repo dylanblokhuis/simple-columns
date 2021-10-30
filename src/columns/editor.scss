@@ -1,0 +1,29 @@
+@import "./variables";
+
+.sc-columns {
+	> .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: grid;
+	}
+
+	@for $size from 1 through $maxCols {
+		&.sc-columns--cols-#{$size}
+			> .block-editor-inner-blocks
+			> .block-editor-block-list__layout {
+			grid-template-columns: repeat($size, 1fr);
+		}
+	}
+
+	@each $tag, $value in $gapOptions {
+		&.sc-columns--row-gap-#{$tag}
+			> .block-editor-inner-blocks
+			> .block-editor-block-list__layout {
+			row-gap: $value;
+		}
+
+		&.sc-columns--col-gap-#{$tag}
+			> .block-editor-inner-blocks
+			> .block-editor-block-list__layout {
+			column-gap: $value;
+		}
+	}
+}
