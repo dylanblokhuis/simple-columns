@@ -9,7 +9,5 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "simple-columns",
-	"editorStyle": "file:../../build/index.css",
-	"style": "file:../../build/style-index.css"
+	"textdomain": "simple-columns"
 }

@@ -1,29 +1,104 @@
 @import "./variables";
 
-.sc-columns {
-	> .block-editor-inner-blocks > .block-editor-block-list__layout {
-		display: grid;
-	}
+// .scc {
+// 	> .block-editor-inner-blocks > .block-editor-block-list__layout {
+// 		display: grid;
+// 		grid-template-columns: 1fr;
+// 	}
 
-	@for $size from 1 through $maxCols {
-		&.sc-columns--cols-#{$size}
-			> .block-editor-inner-blocks
-			> .block-editor-block-list__layout {
-			grid-template-columns: repeat($size, 1fr);
-		}
-	}
+// 	@for $size from 1 through $maxCols {
+// 		&.phone\:scc--cols-#{$size}
+// 			> .block-editor-inner-blocks
+// 			> .block-editor-block-list__layout {
+// 			grid-template-columns: repeat($size, 1fr);
+// 		}
+// 	}
 
-	@each $tag, $value in $gapOptions {
-		&.sc-columns--row-gap-#{$tag}
-			> .block-editor-inner-blocks
-			> .block-editor-block-list__layout {
-			row-gap: $value;
-		}
+// 	@each $tag, $value in $gapOptions {
+// 		&.phone\:scc--row-gap-#{$tag}
+// 			> .block-editor-inner-blocks
+// 			> .block-editor-block-list__layout {
+// 			row-gap: $value;
+// 		}
 
-		&.sc-columns--col-gap-#{$tag}
-			> .block-editor-inner-blocks
-			> .block-editor-block-list__layout {
-			column-gap: $value;
-		}
-	}
-}
+// 		&.phone\:scc--col-gap-#{$tag}
+// 			> .block-editor-inner-blocks
+// 			> .block-editor-block-list__layout {
+// 			column-gap: $value;
+// 		}
+// 	}
+
+// 	@media (min-width: 1024px) {
+// 		@for $size from 1 through $maxCols {
+// 			&.scc--cols-#{$size}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				grid-template-columns: repeat($size, 1fr);
+// 			}
+// 		}
+
+// 		@each $tag, $value in $gapOptions {
+// 			&.scc--row-gap-#{$tag}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				row-gap: $value;
+// 			}
+
+// 			&.scc--col-gap-#{$tag}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				column-gap: $value;
+// 			}
+// 		}
+// 	}
+
+// 	@media (min-width: 768px) {
+// 		@for $size from 1 through $maxCols {
+// 			// laptop
+// 			&.laptop\:scc--cols-#{$size}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				grid-template-columns: repeat($size, 1fr);
+// 			}
+// 		}
+
+// 		@each $tag, $value in $gapOptions {
+// 			&.laptop\:scc--row-gap-#{$tag}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				row-gap: $value;
+// 			}
+
+// 			&.laptop\:scc--col-gap-#{$tag}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				column-gap: $value;
+// 			}
+// 		}
+// 	}
+
+// 	@media (min-width: 640px) {
+// 		@for $size from 1 through $maxCols {
+// 			// tablet
+// 			&.tablet\:scc--cols-#{$size}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				grid-template-columns: repeat($size, 1fr);
+// 			}
+// 		}
+
+// 		@each $tag, $value in $gapOptions {
+// 			&.tablet\:scc--row-gap-#{$tag}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				row-gap: $value;
+// 			}
+
+// 			&.tablet\:scc--col-gap-#{$tag}
+// 				> .block-editor-inner-blocks
+// 				> .block-editor-block-list__layout {
+// 				column-gap: $value;
+// 			}
+// 		}
+// 	}
+// }

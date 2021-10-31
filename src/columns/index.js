@@ -7,6 +7,18 @@ import './style.scss';
 import Edit from './edit';
 import save from './save';
 
+const attributes = {
+	columnsAmount: {
+		type: "number",
+	},
+	rowGap: {
+		type: "string",
+	},
+	columnGap: {
+		type: "string",
+	},
+}
+
 /**
  * Every block starts by registering a new block type definition.
  *
@@ -23,17 +35,41 @@ registerBlockType('simple-columns/columns', {
 	 */
 	save,
 	attributes: {
-		columnsAmount: {
-			type: "number",
-			default: 4,
+		desktop: {
+			type: 'object',
+			default: {
+				columnsAmount: 2,
+				rowGap: "4",
+				columnGap: "4"
+			},
+			...attributes
 		},
-		rowGap: {
-			type: "string",
-			default: "4",
+		laptop: {
+			type: 'object',
+			default: {
+				columnsAmount: undefined,
+				rowGap: undefined,
+				columnGap: undefined
+			},
+			...attributes
 		},
-		columnGap: {
-			type: "string",
-			default: "4",
+		tablet: {
+			type: 'object',
+			default: {
+				columnsAmount: undefined,
+				rowGap: undefined,
+				columnGap: undefined
+			},
+			...attributes
 		},
+		phone: {
+			type: 'object',
+			default: {
+				columnsAmount: undefined,
+				rowGap: undefined,
+				columnGap: undefined
+			},
+			...attributes
+		}
 	}
 });

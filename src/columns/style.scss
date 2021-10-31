@@ -1,21 +1,78 @@
 @import "./variables";
 
-.sc-columns:not(.wp-block) {
+.scc {
 	display: grid;
+	grid-template-columns: 1fr;
 
 	@for $size from 1 through $maxCols {
-		&.sc-columns--cols-#{$size} {
+		&.phone\:scc--cols-#{$size} {
 			grid-template-columns: repeat($size, 1fr);
 		}
 	}
 
 	@each $tag, $value in $gapOptions {
-		&.sc-columns--row-gap-#{$tag} {
+		&.phone\:scc--row-gap-#{$tag} {
 			row-gap: $value;
 		}
 
-		&.sc-columns--col-gap-#{$tag} {
+		&.phone\:scc--col-gap-#{$tag} {
 			column-gap: $value;
+		}
+	}
+
+	@media (min-width: 640px) {
+		@for $size from 1 through $maxCols {
+			// tablet
+			&.tablet\:scc--cols-#{$size} {
+				grid-template-columns: repeat($size, 1fr);
+			}
+		}
+
+		@each $tag, $value in $gapOptions {
+			&.tablet\:scc--row-gap-#{$tag} {
+				row-gap: $value;
+			}
+
+			&.tablet\:scc--col-gap-#{$tag} {
+				column-gap: $value;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		@for $size from 1 through $maxCols {
+			// laptop
+			&.laptop\:scc--cols-#{$size} {
+				grid-template-columns: repeat($size, 1fr);
+			}
+		}
+
+		@each $tag, $value in $gapOptions {
+			&.laptop\:scc--row-gap-#{$tag} {
+				row-gap: $value;
+			}
+
+			&.laptop\:scc--col-gap-#{$tag} {
+				column-gap: $value;
+			}
+		}
+	}
+
+	@media (min-width: 1024px) {
+		@for $size from 1 through $maxCols {
+			&.scc--cols-#{$size} {
+				grid-template-columns: repeat($size, 1fr);
+			}
+		}
+
+		@each $tag, $value in $gapOptions {
+			&.scc--row-gap-#{$tag} {
+				row-gap: $value;
+			}
+
+			&.scc--col-gap-#{$tag} {
+				column-gap: $value;
+			}
 		}
 	}
 }
