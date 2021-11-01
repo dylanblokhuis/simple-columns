@@ -1,4 +1,10 @@
 $maxCols: 12;
+$sides: (
+	"t": "padding-top",
+	"r": "padding-right",
+	"b": "padding-bottom",
+	"l": "padding-left",
+);
 $utilities: (
 	"0": 0px,
 	"1": 0.25rem,

@@ -9,10 +9,26 @@
 		}
 	}
 
+	@each $side, $property in $sides {
+		@each $tag, $value in $utilities {
+			&.phone\:scc-p-#{$side}-#{$tag} {
+				#{$property}: $value;
+			}
+		}
+	}
+
 	@media (min-width: 640px) {
 		@for $size from 1 through $maxCols {
 			&.tablet\:scc--span-#{$size} {
 				grid-column: span $size / span $size;
+			}
+		}
+
+		@each $side, $property in $sides {
+			@each $tag, $value in $utilities {
+				&.tablet\:scc-p-#{$side}-#{$tag} {
+					#{$property}: $value;
+				}
 			}
 		}
 	}
@@ -23,12 +39,28 @@
 				grid-column: span $size / span $size;
 			}
 		}
+
+		@each $side, $property in $sides {
+			@each $tag, $value in $utilities {
+				&.laptop\:scc-p-#{$side}-#{$tag} {
+					#{$property}: $value;
+				}
+			}
+		}
 	}
 
 	@media (min-width: 1024px) {
 		@for $size from 1 through $maxCols {
 			&.scc--span-#{$size} {
 				grid-column: span $size / span $size;
+			}
+		}
+
+		@each $side, $property in $sides {
+			@each $tag, $value in $utilities {
+				&.scc-p-#{$side}-#{$tag} {
+					#{$property}: $value;
+				}
 			}
 		}
 	}

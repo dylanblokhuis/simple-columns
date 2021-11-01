@@ -7,17 +7,26 @@ import {
 	PanelColorSettings,
 	getColorObjectByColorValue,
 } from '@wordpress/block-editor';
-import { select } from "@wordpress/data"
 import { PanelBody, RangeControl, CustomSelectControl } from "@wordpress/components";
-import { useCallback, useMemo } from "@wordpress/element"
-
+import { useCallback } from "@wordpress/element"
+import { useSelect } from '@wordpress/data';
 import classNames from 'classnames';
+
 import { UTILITIES } from '../constants';
 import './editor.scss';
 import ColumnsVerticalAlignment from './toolbar/column-vertical-alignment';
 
-function Edit({ setAttributes, attributes }) {
-	const settings = useMemo(() => select('core/editor').getEditorSettings(), [])
+function Edit({ clientId, setAttributes, attributes }) {
+	const { colors } = useSelect(
+		(select) => {
+			const { colors } = select('core/editor').getEditorSettings();
+
+			return {
+				colors: colors
+			}
+		},
+		[clientId]
+	)
 
 	const classes = classNames({
 		'scc': true,
@@ -67,7 +76,7 @@ function Edit({ setAttributes, attributes }) {
 
 	const setBackgroundColorAttr = useCallback(
 		(hex) => {
-			const object = getColorObjectByColorValue(settings.colors, hex);
+			const object = getColorObjectByColorValue(colors, hex);
 			const backgroundColorClass = object ? `${object.slug}` : undefined;
 
 			setAttributes({
@@ -93,7 +102,7 @@ function Edit({ setAttributes, attributes }) {
 					colorSettings={[
 						{
 							label: __("Background color", "simple-columns"),
-							value: settings.colors.find(it => it.slug === attributes.backgroundColor)?.color,
+							value: colors.find(it => it.slug === attributes.backgroundColor)?.color,
 							onChange: (val) => setBackgroundColorAttr(val),
 							disableCustomColors: true,
 							clearable: true

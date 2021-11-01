@@ -7,6 +7,18 @@ import Save from './save';
 const attributes = {
 	span: {
 		type: 'string'
+	},
+	paddingTop: {
+		type: 'string'
+	},
+	paddingLeft: {
+		type: 'string'
+	},
+	paddingRight: {
+		type: 'string'
+	},
+	paddingBottom: {
+		type: 'string'
 	}
 }
 
@@ -27,6 +39,10 @@ registerBlockType('simple-columns/column', {
 			type: 'object',
 			default: {
 				span: 1,
+				paddingTop: undefined,
+				paddingLeft: undefined,
+				paddingRight: undefined,
+				paddingBottom: undefined
 			},
 			...attributes
 		},
@@ -34,6 +50,10 @@ registerBlockType('simple-columns/column', {
 			type: 'object',
 			default: {
 				span: undefined,
+				paddingTop: undefined,
+				paddingLeft: undefined,
+				paddingRight: undefined,
+				paddingBottom: undefined
 			},
 			...attributes
 		},
@@ -41,6 +61,10 @@ registerBlockType('simple-columns/column', {
 			type: 'object',
 			default: {
 				span: undefined,
+				paddingTop: undefined,
+				paddingLeft: undefined,
+				paddingRight: undefined,
+				paddingBottom: undefined
 			},
 			...attributes
 		},
@@ -48,6 +72,10 @@ registerBlockType('simple-columns/column', {
 			type: 'object',
 			default: {
 				span: undefined,
+				paddingTop: undefined,
+				paddingLeft: undefined,
+				paddingRight: undefined,
+				paddingBottom: undefined
 			},
 			...attributes
 		},

@@ -1,1 +1,48 @@
 @import "../variables";
+
+.wp-block-simple-columns-column {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sc-padding-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	align-items: center;
+}
+
+.sc-padding-selector {
+	width: 75px;
+	margin: 0 auto;
+	&.left {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	&.top {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	&.right {
+		grid-column: 3;
+		grid-row: 2;
+	}
+
+	&.bottom {
+		grid-column: 2;
+		grid-row: 3;
+	}
+
+	.components-custom-select-control__button {
+		width: 75px;
+		min-width: unset;
+	}
+
+	.components-custom-select-control__menu {
+		font-size: 14px;
+		min-width: unset;
+		width: 150px;
+	}
+}

@@ -3,7 +3,7 @@ import { __ } from '@wordpress/i18n';
 export const UTILITIES = [
   {
     key: undefined,
-    name: __("Choose one", "simple-columns"),
+    name: __("None", "simple-columns"),
   },
   {
     key: "0",
