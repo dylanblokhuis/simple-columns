@@ -4,7 +4,6 @@ import {
 	__experimentalUseInnerBlocksProps as useInnerBlocksProps,
 	InspectorControls,
 	BlockControls,
-	BlockVerticalAlignmentToolbar,
 	withColors,
 	PanelColorSettings,
 	getColorObjectByColorValue,
@@ -16,6 +15,7 @@ import { useCallback, useMemo } from "@wordpress/element"
 import classNames from 'classnames';
 import { UTILITIES } from '../constants';
 import './editor.scss';
+import BlockVerticalAlignmentUI from './toolbar';
 
 function Edit({ setAttributes, attributes }) {
 	const settings = useMemo(() => select('core/editor').getEditorSettings(), [])
@@ -83,7 +83,7 @@ function Edit({ setAttributes, attributes }) {
 		<>
 			<BlockControls>
 				{/* TODO: Create custom toolbar with equal height columns option */}
-				<BlockVerticalAlignmentToolbar
+				<BlockVerticalAlignmentUI
 					onChange={(val) => setAttributes({
 						verticalAlignment: val
 					})}

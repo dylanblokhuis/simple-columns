@@ -4,6 +4,10 @@
 	display: grid;
 	grid-template-columns: 1fr;
 
+	&.scc--items-equal {
+		align-items: baseline;
+	}
+
 	&.scc--items-top {
 		align-items: flex-start;
 	}
