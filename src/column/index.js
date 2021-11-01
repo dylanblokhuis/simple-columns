@@ -20,6 +20,9 @@ registerBlockType('simple-columns/column', {
 	save: Save,
 
 	attributes: {
+		backgroundColor: {
+			type: "string"
+		},
 		desktop: {
 			type: 'object',
 			default: {

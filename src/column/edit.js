@@ -1,8 +1,8 @@
 import { __ } from '@wordpress/i18n';
 
-import { useBlockProps, __experimentalUseInnerBlocksProps as useInnerBlocksProps, store, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, __experimentalUseInnerBlocksProps as useInnerBlocksProps, store, InspectorControls, getColorObjectByColorValue, PanelColorSettings } from '@wordpress/block-editor';
 import { useCallback } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { useSelect, select } from '@wordpress/data';
 import classNames from 'classnames';
 
 import './editor.scss';
@@ -11,6 +11,7 @@ import { PanelBody, RangeControl } from '@wordpress/components';
 export default function Edit({ clientId, attributes, setAttributes }) {
 	const classes = classNames({
 		'scc-col': true,
+		[`has-${attributes.backgroundColor}-background-color`]: !!attributes.backgroundColor,
 		[`scc--span-${attributes.desktop.span}`]: !!attributes.desktop.span,
 		[`laptop:scc--span-${attributes.laptop.span}`]: !!attributes.laptop.span,
 		[`tablet:scc--span-${attributes.tablet.span}`]: !!attributes.tablet.span,
@@ -21,16 +22,14 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 		className: classes
 	});
 
-	const { hasChildBlocks } = useSelect(
+	const { hasChildBlocks, colors } = useSelect(
 		(select) => {
-			const { getBlockOrder, getBlockRootClientId } = select(store)
-
-			const rootId = getBlockRootClientId(clientId)
+			const { getBlockOrder } = select(store)
+			const { colors } = select('core/editor').getEditorSettings();
 
 			return {
 				hasChildBlocks: getBlockOrder(clientId).length > 0,
-				rootClientId: rootId,
-				columnsIds: getBlockOrder(rootId),
+				colors: colors
 			}
 		},
 		[clientId]
@@ -56,9 +55,33 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 		[attributes],
 	)
 
+	const setBackgroundColorAttr = useCallback(
+		(hex) => {
+			const object = getColorObjectByColorValue(colors, hex);
+			const backgroundColorClass = object ? `${object.slug}` : undefined;
+
+			setAttributes({
+				backgroundColor: backgroundColorClass
+			})
+		},
+		[attributes],
+	)
+
 	return (
 		<>
 			<InspectorControls>
+				<PanelColorSettings
+					title={__("Color", "simple-columns")}
+					colorSettings={[
+						{
+							label: __("Background color", "simple-columns"),
+							value: colors.find(it => it.slug === attributes.backgroundColor)?.color,
+							onChange: (val) => setBackgroundColorAttr(val),
+							disableCustomColors: true,
+							clearable: true
+						}
+					]}
+				/>
 				<ColumnPanel title={__("Desktop Settings (>=1024px)", "simple-columns")} type="desktop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
 				<ColumnPanel title={__("Laptop Settings (>=768px)", "simple-columns")} type="laptop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
 				<ColumnPanel title={__("Tablet Settings (>=640px)", "simple-columns")} type="tablet" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
