@@ -20,22 +20,22 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 		[`scc-p-l-${attributes.desktop.paddingLeft}`]: !!attributes.desktop.paddingLeft,
 
 		[`laptop:scc--span-${attributes.laptop.span}`]: !!attributes.laptop.span,
-		[`laptop:scc-p-t-${attributes.desktop.paddingTop}`]: !!attributes.laptop.paddingTop,
-		[`laptop:scc-p-r-${attributes.desktop.paddingRight}`]: !!attributes.laptop.paddingRight,
-		[`laptop:scc-p-b-${attributes.desktop.paddingBottom}`]: !!attributes.laptop.paddingBottom,
-		[`laptop:scc-p-l-${attributes.desktop.paddingLeft}`]: !!attributes.laptop.paddingLeft,
+		[`laptop:scc-p-t-${attributes.laptop.paddingTop}`]: !!attributes.laptop.paddingTop,
+		[`laptop:scc-p-r-${attributes.laptop.paddingRight}`]: !!attributes.laptop.paddingRight,
+		[`laptop:scc-p-b-${attributes.laptop.paddingBottom}`]: !!attributes.laptop.paddingBottom,
+		[`laptop:scc-p-l-${attributes.laptop.paddingLeft}`]: !!attributes.laptop.paddingLeft,
 
 		[`tablet:scc--span-${attributes.tablet.span}`]: !!attributes.tablet.span,
-		[`tablet:scc-p-t-${attributes.desktop.paddingTop}`]: !!attributes.tablet.paddingTop,
-		[`tablet:scc-p-r-${attributes.desktop.paddingRight}`]: !!attributes.tablet.paddingRight,
-		[`tablet:scc-p-b-${attributes.desktop.paddingBottom}`]: !!attributes.tablet.paddingBottom,
-		[`tablet:scc-p-l-${attributes.desktop.paddingLeft}`]: !!attributes.tablet.paddingLeft,
+		[`tablet:scc-p-t-${attributes.tablet.paddingTop}`]: !!attributes.tablet.paddingTop,
+		[`tablet:scc-p-r-${attributes.tablet.paddingRight}`]: !!attributes.tablet.paddingRight,
+		[`tablet:scc-p-b-${attributes.tablet.paddingBottom}`]: !!attributes.tablet.paddingBottom,
+		[`tablet:scc-p-l-${attributes.tablet.paddingLeft}`]: !!attributes.tablet.paddingLeft,
 
 		[`phone:scc--span-${attributes.phone.span}`]: !!attributes.phone.span,
-		[`phone:scc-p-t-${attributes.desktop.paddingTop}`]: !!attributes.phone.paddingTop,
-		[`phone:scc-p-r-${attributes.desktop.paddingRight}`]: !!attributes.phone.paddingRight,
-		[`phone:scc-p-b-${attributes.desktop.paddingBottom}`]: !!attributes.phone.paddingBottom,
-		[`phone:scc-p-l-${attributes.desktop.paddingLeft}`]: !!attributes.phone.paddingLeft,
+		[`phone:scc-p-t-${attributes.phone.paddingTop}`]: !!attributes.phone.paddingTop,
+		[`phone:scc-p-r-${attributes.phone.paddingRight}`]: !!attributes.phone.paddingRight,
+		[`phone:scc-p-b-${attributes.phone.paddingBottom}`]: !!attributes.phone.paddingBottom,
+		[`phone:scc-p-l-${attributes.phone.paddingLeft}`]: !!attributes.phone.paddingLeft,
 	})
 
 	const blockProps = useBlockProps({
