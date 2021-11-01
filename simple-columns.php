@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Simple Columns
  * Description:       Example block written with ESNext standard and JSX support – build step required.
@@ -20,14 +21,16 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-function create_block_simple_columns_block_init() {
-	register_block_type( __DIR__ . "/src/columns");
-	register_block_type( __DIR__ . "/src/column");
+function create_block_simple_columns_block_init()
+{
+	register_block_type(__DIR__ . "/src/columns");
+	register_block_type(__DIR__ . "/src/column");
 }
-add_action( 'init', 'create_block_simple_columns_block_init' );
+add_action('init', 'create_block_simple_columns_block_init');
 
-function enqueue_block_simple_columns_assets() {
-	$asset_file = require plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
-	wp_enqueue_script( 'simple-columns', plugins_url( '/build/index.js', __FILE__ ), $asset_file['dependencies'], $asset_file['version'], false);
+function enqueue_block_simple_columns_assets()
+{
+	$asset_file = require plugin_dir_path(__FILE__) . 'build/index.asset.php';
+	wp_enqueue_script('simple-columns', plugins_url('/build/index.js', __FILE__), $asset_file['dependencies'], $asset_file['version'], false);
 }
-add_action( 'enqueue_block_editor_assets', 'enqueue_block_simple_columns_assets' );
+add_action('enqueue_block_editor_assets', 'enqueue_block_simple_columns_assets');

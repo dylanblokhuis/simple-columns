@@ -1,2 +1,560 @@
-.scc{-ms-grid-columns:1fr;display:-ms-grid;display:grid;grid-template-columns:1fr}.scc.phone\:scc--cols-1{-ms-grid-columns:(1fr)[1];grid-template-columns:repeat(1,1fr)}.scc.phone\:scc--cols-2{-ms-grid-columns:(1fr)[2];grid-template-columns:repeat(2,1fr)}.scc.phone\:scc--cols-3{-ms-grid-columns:(1fr)[3];grid-template-columns:repeat(3,1fr)}.scc.phone\:scc--cols-4{-ms-grid-columns:(1fr)[4];grid-template-columns:repeat(4,1fr)}.scc.phone\:scc--cols-5{-ms-grid-columns:(1fr)[5];grid-template-columns:repeat(5,1fr)}.scc.phone\:scc--cols-6{-ms-grid-columns:(1fr)[6];grid-template-columns:repeat(6,1fr)}.scc.phone\:scc--cols-7{-ms-grid-columns:(1fr)[7];grid-template-columns:repeat(7,1fr)}.scc.phone\:scc--cols-8{-ms-grid-columns:(1fr)[8];grid-template-columns:repeat(8,1fr)}.scc.phone\:scc--cols-9{-ms-grid-columns:(1fr)[9];grid-template-columns:repeat(9,1fr)}.scc.phone\:scc--cols-10{-ms-grid-columns:(1fr)[10];grid-template-columns:repeat(10,1fr)}.scc.phone\:scc--cols-11{-ms-grid-columns:(1fr)[11];grid-template-columns:repeat(11,1fr)}.scc.phone\:scc--cols-12{-ms-grid-columns:(1fr)[12];grid-template-columns:repeat(12,1fr)}.scc.phone\:scc--row-gap-0{row-gap:0}.scc.phone\:scc--col-gap-0{-moz-column-gap:0;column-gap:0}.scc.phone\:scc--row-gap-1{row-gap:.25rem}.scc.phone\:scc--col-gap-1{-moz-column-gap:.25rem;column-gap:.25rem}.scc.phone\:scc--row-gap-1\.5{row-gap:.375rem}.scc.phone\:scc--col-gap-1\.5{-moz-column-gap:.375rem;column-gap:.375rem}.scc.phone\:scc--row-gap-2{row-gap:.5rem}.scc.phone\:scc--col-gap-2{-moz-column-gap:.5rem;column-gap:.5rem}.scc.phone\:scc--row-gap-2\.5{row-gap:.625rem}.scc.phone\:scc--col-gap-2\.5{-moz-column-gap:.625rem;column-gap:.625rem}.scc.phone\:scc--row-gap-3{row-gap:.75rem}.scc.phone\:scc--col-gap-3{-moz-column-gap:.75rem;column-gap:.75rem}.scc.phone\:scc--row-gap-3\.5{row-gap:.875rem}.scc.phone\:scc--col-gap-3\.5{-moz-column-gap:.875rem;column-gap:.875rem}.scc.phone\:scc--row-gap-4{row-gap:1rem}.scc.phone\:scc--col-gap-4{-moz-column-gap:1rem;column-gap:1rem}.scc.phone\:scc--row-gap-5{row-gap:1.25rem}.scc.phone\:scc--col-gap-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.scc.phone\:scc--row-gap-6{row-gap:1.5rem}.scc.phone\:scc--col-gap-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.scc.phone\:scc--row-gap-7{row-gap:1.75rem}.scc.phone\:scc--col-gap-7{-moz-column-gap:1.75rem;column-gap:1.75rem}.scc.phone\:scc--row-gap-8{row-gap:2rem}.scc.phone\:scc--col-gap-8{-moz-column-gap:2rem;column-gap:2rem}@media(min-width:640px){.scc.tablet\:scc--cols-1{-ms-grid-columns:(1fr)[1];grid-template-columns:repeat(1,1fr)}.scc.tablet\:scc--cols-2{-ms-grid-columns:(1fr)[2];grid-template-columns:repeat(2,1fr)}.scc.tablet\:scc--cols-3{-ms-grid-columns:(1fr)[3];grid-template-columns:repeat(3,1fr)}.scc.tablet\:scc--cols-4{-ms-grid-columns:(1fr)[4];grid-template-columns:repeat(4,1fr)}.scc.tablet\:scc--cols-5{-ms-grid-columns:(1fr)[5];grid-template-columns:repeat(5,1fr)}.scc.tablet\:scc--cols-6{-ms-grid-columns:(1fr)[6];grid-template-columns:repeat(6,1fr)}.scc.tablet\:scc--cols-7{-ms-grid-columns:(1fr)[7];grid-template-columns:repeat(7,1fr)}.scc.tablet\:scc--cols-8{-ms-grid-columns:(1fr)[8];grid-template-columns:repeat(8,1fr)}.scc.tablet\:scc--cols-9{-ms-grid-columns:(1fr)[9];grid-template-columns:repeat(9,1fr)}.scc.tablet\:scc--cols-10{-ms-grid-columns:(1fr)[10];grid-template-columns:repeat(10,1fr)}.scc.tablet\:scc--cols-11{-ms-grid-columns:(1fr)[11];grid-template-columns:repeat(11,1fr)}.scc.tablet\:scc--cols-12{-ms-grid-columns:(1fr)[12];grid-template-columns:repeat(12,1fr)}.scc.tablet\:scc--row-gap-0{row-gap:0}.scc.tablet\:scc--col-gap-0{-moz-column-gap:0;column-gap:0}.scc.tablet\:scc--row-gap-1{row-gap:.25rem}.scc.tablet\:scc--col-gap-1{-moz-column-gap:.25rem;column-gap:.25rem}.scc.tablet\:scc--row-gap-1\.5{row-gap:.375rem}.scc.tablet\:scc--col-gap-1\.5{-moz-column-gap:.375rem;column-gap:.375rem}.scc.tablet\:scc--row-gap-2{row-gap:.5rem}.scc.tablet\:scc--col-gap-2{-moz-column-gap:.5rem;column-gap:.5rem}.scc.tablet\:scc--row-gap-2\.5{row-gap:.625rem}.scc.tablet\:scc--col-gap-2\.5{-moz-column-gap:.625rem;column-gap:.625rem}.scc.tablet\:scc--row-gap-3{row-gap:.75rem}.scc.tablet\:scc--col-gap-3{-moz-column-gap:.75rem;column-gap:.75rem}.scc.tablet\:scc--row-gap-3\.5{row-gap:.875rem}.scc.tablet\:scc--col-gap-3\.5{-moz-column-gap:.875rem;column-gap:.875rem}.scc.tablet\:scc--row-gap-4{row-gap:1rem}.scc.tablet\:scc--col-gap-4{-moz-column-gap:1rem;column-gap:1rem}.scc.tablet\:scc--row-gap-5{row-gap:1.25rem}.scc.tablet\:scc--col-gap-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.scc.tablet\:scc--row-gap-6{row-gap:1.5rem}.scc.tablet\:scc--col-gap-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.scc.tablet\:scc--row-gap-7{row-gap:1.75rem}.scc.tablet\:scc--col-gap-7{-moz-column-gap:1.75rem;column-gap:1.75rem}.scc.tablet\:scc--row-gap-8{row-gap:2rem}.scc.tablet\:scc--col-gap-8{-moz-column-gap:2rem;column-gap:2rem}}@media(min-width:768px){.scc.laptop\:scc--cols-1{-ms-grid-columns:(1fr)[1];grid-template-columns:repeat(1,1fr)}.scc.laptop\:scc--cols-2{-ms-grid-columns:(1fr)[2];grid-template-columns:repeat(2,1fr)}.scc.laptop\:scc--cols-3{-ms-grid-columns:(1fr)[3];grid-template-columns:repeat(3,1fr)}.scc.laptop\:scc--cols-4{-ms-grid-columns:(1fr)[4];grid-template-columns:repeat(4,1fr)}.scc.laptop\:scc--cols-5{-ms-grid-columns:(1fr)[5];grid-template-columns:repeat(5,1fr)}.scc.laptop\:scc--cols-6{-ms-grid-columns:(1fr)[6];grid-template-columns:repeat(6,1fr)}.scc.laptop\:scc--cols-7{-ms-grid-columns:(1fr)[7];grid-template-columns:repeat(7,1fr)}.scc.laptop\:scc--cols-8{-ms-grid-columns:(1fr)[8];grid-template-columns:repeat(8,1fr)}.scc.laptop\:scc--cols-9{-ms-grid-columns:(1fr)[9];grid-template-columns:repeat(9,1fr)}.scc.laptop\:scc--cols-10{-ms-grid-columns:(1fr)[10];grid-template-columns:repeat(10,1fr)}.scc.laptop\:scc--cols-11{-ms-grid-columns:(1fr)[11];grid-template-columns:repeat(11,1fr)}.scc.laptop\:scc--cols-12{-ms-grid-columns:(1fr)[12];grid-template-columns:repeat(12,1fr)}.scc.laptop\:scc--row-gap-0{row-gap:0}.scc.laptop\:scc--col-gap-0{-moz-column-gap:0;column-gap:0}.scc.laptop\:scc--row-gap-1{row-gap:.25rem}.scc.laptop\:scc--col-gap-1{-moz-column-gap:.25rem;column-gap:.25rem}.scc.laptop\:scc--row-gap-1\.5{row-gap:.375rem}.scc.laptop\:scc--col-gap-1\.5{-moz-column-gap:.375rem;column-gap:.375rem}.scc.laptop\:scc--row-gap-2{row-gap:.5rem}.scc.laptop\:scc--col-gap-2{-moz-column-gap:.5rem;column-gap:.5rem}.scc.laptop\:scc--row-gap-2\.5{row-gap:.625rem}.scc.laptop\:scc--col-gap-2\.5{-moz-column-gap:.625rem;column-gap:.625rem}.scc.laptop\:scc--row-gap-3{row-gap:.75rem}.scc.laptop\:scc--col-gap-3{-moz-column-gap:.75rem;column-gap:.75rem}.scc.laptop\:scc--row-gap-3\.5{row-gap:.875rem}.scc.laptop\:scc--col-gap-3\.5{-moz-column-gap:.875rem;column-gap:.875rem}.scc.laptop\:scc--row-gap-4{row-gap:1rem}.scc.laptop\:scc--col-gap-4{-moz-column-gap:1rem;column-gap:1rem}.scc.laptop\:scc--row-gap-5{row-gap:1.25rem}.scc.laptop\:scc--col-gap-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.scc.laptop\:scc--row-gap-6{row-gap:1.5rem}.scc.laptop\:scc--col-gap-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.scc.laptop\:scc--row-gap-7{row-gap:1.75rem}.scc.laptop\:scc--col-gap-7{-moz-column-gap:1.75rem;column-gap:1.75rem}.scc.laptop\:scc--row-gap-8{row-gap:2rem}.scc.laptop\:scc--col-gap-8{-moz-column-gap:2rem;column-gap:2rem}}@media(min-width:1024px){.scc.scc--cols-1{-ms-grid-columns:(1fr)[1];grid-template-columns:repeat(1,1fr)}.scc.scc--cols-2{-ms-grid-columns:(1fr)[2];grid-template-columns:repeat(2,1fr)}.scc.scc--cols-3{-ms-grid-columns:(1fr)[3];grid-template-columns:repeat(3,1fr)}.scc.scc--cols-4{-ms-grid-columns:(1fr)[4];grid-template-columns:repeat(4,1fr)}.scc.scc--cols-5{-ms-grid-columns:(1fr)[5];grid-template-columns:repeat(5,1fr)}.scc.scc--cols-6{-ms-grid-columns:(1fr)[6];grid-template-columns:repeat(6,1fr)}.scc.scc--cols-7{-ms-grid-columns:(1fr)[7];grid-template-columns:repeat(7,1fr)}.scc.scc--cols-8{-ms-grid-columns:(1fr)[8];grid-template-columns:repeat(8,1fr)}.scc.scc--cols-9{-ms-grid-columns:(1fr)[9];grid-template-columns:repeat(9,1fr)}.scc.scc--cols-10{-ms-grid-columns:(1fr)[10];grid-template-columns:repeat(10,1fr)}.scc.scc--cols-11{-ms-grid-columns:(1fr)[11];grid-template-columns:repeat(11,1fr)}.scc.scc--cols-12{-ms-grid-columns:(1fr)[12];grid-template-columns:repeat(12,1fr)}.scc.scc--row-gap-0{row-gap:0}.scc.scc--col-gap-0{-moz-column-gap:0;column-gap:0}.scc.scc--row-gap-1{row-gap:.25rem}.scc.scc--col-gap-1{-moz-column-gap:.25rem;column-gap:.25rem}.scc.scc--row-gap-1\.5{row-gap:.375rem}.scc.scc--col-gap-1\.5{-moz-column-gap:.375rem;column-gap:.375rem}.scc.scc--row-gap-2{row-gap:.5rem}.scc.scc--col-gap-2{-moz-column-gap:.5rem;column-gap:.5rem}.scc.scc--row-gap-2\.5{row-gap:.625rem}.scc.scc--col-gap-2\.5{-moz-column-gap:.625rem;column-gap:.625rem}.scc.scc--row-gap-3{row-gap:.75rem}.scc.scc--col-gap-3{-moz-column-gap:.75rem;column-gap:.75rem}.scc.scc--row-gap-3\.5{row-gap:.875rem}.scc.scc--col-gap-3\.5{-moz-column-gap:.875rem;column-gap:.875rem}.scc.scc--row-gap-4{row-gap:1rem}.scc.scc--col-gap-4{-moz-column-gap:1rem;column-gap:1rem}.scc.scc--row-gap-5{row-gap:1.25rem}.scc.scc--col-gap-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.scc.scc--row-gap-6{row-gap:1.5rem}.scc.scc--col-gap-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.scc.scc--row-gap-7{row-gap:1.75rem}.scc.scc--col-gap-7{-moz-column-gap:1.75rem;column-gap:1.75rem}.scc.scc--row-gap-8{row-gap:2rem}.scc.scc--col-gap-8{-moz-column-gap:2rem;column-gap:2rem}}
-.sc-column{width:100%}
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/columns/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+.scc {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+.scc.scc--items-top {
+  align-items: flex-start;
+}
+.scc.scc--items-center {
+  align-items: center;
+}
+.scc.scc--items-bottom {
+  align-items: flex-end;
+}
+.scc.phone\:scc--cols-1 {
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+}
+.scc.phone\:scc--cols-2 {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+.scc.phone\:scc--cols-3 {
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+.scc.phone\:scc--cols-4 {
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+.scc.phone\:scc--cols-5 {
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+}
+.scc.phone\:scc--cols-6 {
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+}
+.scc.phone\:scc--cols-7 {
+  -ms-grid-columns: (1fr)[7];
+  grid-template-columns: repeat(7, 1fr);
+}
+.scc.phone\:scc--cols-8 {
+  -ms-grid-columns: (1fr)[8];
+  grid-template-columns: repeat(8, 1fr);
+}
+.scc.phone\:scc--cols-9 {
+  -ms-grid-columns: (1fr)[9];
+  grid-template-columns: repeat(9, 1fr);
+}
+.scc.phone\:scc--cols-10 {
+  -ms-grid-columns: (1fr)[10];
+  grid-template-columns: repeat(10, 1fr);
+}
+.scc.phone\:scc--cols-11 {
+  -ms-grid-columns: (1fr)[11];
+  grid-template-columns: repeat(11, 1fr);
+}
+.scc.phone\:scc--cols-12 {
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+}
+.scc.phone\:scc--row-gap-0 {
+  row-gap: 0px;
+}
+.scc.phone\:scc--col-gap-0 {
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+}
+.scc.phone\:scc--row-gap-1 {
+  row-gap: 0.25rem;
+}
+.scc.phone\:scc--col-gap-1 {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+.scc.phone\:scc--row-gap-1\.5 {
+  row-gap: 0.375rem;
+}
+.scc.phone\:scc--col-gap-1\.5 {
+  -moz-column-gap: 0.375rem;
+       column-gap: 0.375rem;
+}
+.scc.phone\:scc--row-gap-2 {
+  row-gap: 0.5rem;
+}
+.scc.phone\:scc--col-gap-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.scc.phone\:scc--row-gap-2\.5 {
+  row-gap: 0.625rem;
+}
+.scc.phone\:scc--col-gap-2\.5 {
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
+}
+.scc.phone\:scc--row-gap-3 {
+  row-gap: 0.75rem;
+}
+.scc.phone\:scc--col-gap-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+.scc.phone\:scc--row-gap-3\.5 {
+  row-gap: 0.875rem;
+}
+.scc.phone\:scc--col-gap-3\.5 {
+  -moz-column-gap: 0.875rem;
+       column-gap: 0.875rem;
+}
+.scc.phone\:scc--row-gap-4 {
+  row-gap: 1rem;
+}
+.scc.phone\:scc--col-gap-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.scc.phone\:scc--row-gap-5 {
+  row-gap: 1.25rem;
+}
+.scc.phone\:scc--col-gap-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+.scc.phone\:scc--row-gap-6 {
+  row-gap: 1.5rem;
+}
+.scc.phone\:scc--col-gap-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.scc.phone\:scc--row-gap-7 {
+  row-gap: 1.75rem;
+}
+.scc.phone\:scc--col-gap-7 {
+  -moz-column-gap: 1.75rem;
+       column-gap: 1.75rem;
+}
+.scc.phone\:scc--row-gap-8 {
+  row-gap: 2rem;
+}
+.scc.phone\:scc--col-gap-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+@media (min-width: 640px) {
+  .scc.tablet\:scc--cols-1 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .scc.tablet\:scc--cols-2 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scc.tablet\:scc--cols-3 {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .scc.tablet\:scc--cols-4 {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .scc.tablet\:scc--cols-5 {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .scc.tablet\:scc--cols-6 {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .scc.tablet\:scc--cols-7 {
+    -ms-grid-columns: (1fr)[7];
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .scc.tablet\:scc--cols-8 {
+    -ms-grid-columns: (1fr)[8];
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .scc.tablet\:scc--cols-9 {
+    -ms-grid-columns: (1fr)[9];
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .scc.tablet\:scc--cols-10 {
+    -ms-grid-columns: (1fr)[10];
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .scc.tablet\:scc--cols-11 {
+    -ms-grid-columns: (1fr)[11];
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .scc.tablet\:scc--cols-12 {
+    -ms-grid-columns: (1fr)[12];
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .scc.tablet\:scc--row-gap-0 {
+    row-gap: 0px;
+  }
+  .scc.tablet\:scc--col-gap-0 {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+  .scc.tablet\:scc--row-gap-1 {
+    row-gap: 0.25rem;
+  }
+  .scc.tablet\:scc--col-gap-1 {
+    -moz-column-gap: 0.25rem;
+         column-gap: 0.25rem;
+  }
+  .scc.tablet\:scc--row-gap-1\.5 {
+    row-gap: 0.375rem;
+  }
+  .scc.tablet\:scc--col-gap-1\.5 {
+    -moz-column-gap: 0.375rem;
+         column-gap: 0.375rem;
+  }
+  .scc.tablet\:scc--row-gap-2 {
+    row-gap: 0.5rem;
+  }
+  .scc.tablet\:scc--col-gap-2 {
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+  }
+  .scc.tablet\:scc--row-gap-2\.5 {
+    row-gap: 0.625rem;
+  }
+  .scc.tablet\:scc--col-gap-2\.5 {
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
+  }
+  .scc.tablet\:scc--row-gap-3 {
+    row-gap: 0.75rem;
+  }
+  .scc.tablet\:scc--col-gap-3 {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+  }
+  .scc.tablet\:scc--row-gap-3\.5 {
+    row-gap: 0.875rem;
+  }
+  .scc.tablet\:scc--col-gap-3\.5 {
+    -moz-column-gap: 0.875rem;
+         column-gap: 0.875rem;
+  }
+  .scc.tablet\:scc--row-gap-4 {
+    row-gap: 1rem;
+  }
+  .scc.tablet\:scc--col-gap-4 {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+  .scc.tablet\:scc--row-gap-5 {
+    row-gap: 1.25rem;
+  }
+  .scc.tablet\:scc--col-gap-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+  .scc.tablet\:scc--row-gap-6 {
+    row-gap: 1.5rem;
+  }
+  .scc.tablet\:scc--col-gap-6 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .scc.tablet\:scc--row-gap-7 {
+    row-gap: 1.75rem;
+  }
+  .scc.tablet\:scc--col-gap-7 {
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
+  }
+  .scc.tablet\:scc--row-gap-8 {
+    row-gap: 2rem;
+  }
+  .scc.tablet\:scc--col-gap-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .scc.laptop\:scc--cols-1 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .scc.laptop\:scc--cols-2 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scc.laptop\:scc--cols-3 {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .scc.laptop\:scc--cols-4 {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .scc.laptop\:scc--cols-5 {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .scc.laptop\:scc--cols-6 {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .scc.laptop\:scc--cols-7 {
+    -ms-grid-columns: (1fr)[7];
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .scc.laptop\:scc--cols-8 {
+    -ms-grid-columns: (1fr)[8];
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .scc.laptop\:scc--cols-9 {
+    -ms-grid-columns: (1fr)[9];
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .scc.laptop\:scc--cols-10 {
+    -ms-grid-columns: (1fr)[10];
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .scc.laptop\:scc--cols-11 {
+    -ms-grid-columns: (1fr)[11];
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .scc.laptop\:scc--cols-12 {
+    -ms-grid-columns: (1fr)[12];
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .scc.laptop\:scc--row-gap-0 {
+    row-gap: 0px;
+  }
+  .scc.laptop\:scc--col-gap-0 {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+  .scc.laptop\:scc--row-gap-1 {
+    row-gap: 0.25rem;
+  }
+  .scc.laptop\:scc--col-gap-1 {
+    -moz-column-gap: 0.25rem;
+         column-gap: 0.25rem;
+  }
+  .scc.laptop\:scc--row-gap-1\.5 {
+    row-gap: 0.375rem;
+  }
+  .scc.laptop\:scc--col-gap-1\.5 {
+    -moz-column-gap: 0.375rem;
+         column-gap: 0.375rem;
+  }
+  .scc.laptop\:scc--row-gap-2 {
+    row-gap: 0.5rem;
+  }
+  .scc.laptop\:scc--col-gap-2 {
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+  }
+  .scc.laptop\:scc--row-gap-2\.5 {
+    row-gap: 0.625rem;
+  }
+  .scc.laptop\:scc--col-gap-2\.5 {
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
+  }
+  .scc.laptop\:scc--row-gap-3 {
+    row-gap: 0.75rem;
+  }
+  .scc.laptop\:scc--col-gap-3 {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+  }
+  .scc.laptop\:scc--row-gap-3\.5 {
+    row-gap: 0.875rem;
+  }
+  .scc.laptop\:scc--col-gap-3\.5 {
+    -moz-column-gap: 0.875rem;
+         column-gap: 0.875rem;
+  }
+  .scc.laptop\:scc--row-gap-4 {
+    row-gap: 1rem;
+  }
+  .scc.laptop\:scc--col-gap-4 {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+  .scc.laptop\:scc--row-gap-5 {
+    row-gap: 1.25rem;
+  }
+  .scc.laptop\:scc--col-gap-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+  .scc.laptop\:scc--row-gap-6 {
+    row-gap: 1.5rem;
+  }
+  .scc.laptop\:scc--col-gap-6 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .scc.laptop\:scc--row-gap-7 {
+    row-gap: 1.75rem;
+  }
+  .scc.laptop\:scc--col-gap-7 {
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
+  }
+  .scc.laptop\:scc--row-gap-8 {
+    row-gap: 2rem;
+  }
+  .scc.laptop\:scc--col-gap-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .scc.scc--cols-1 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .scc.scc--cols-2 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scc.scc--cols-3 {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .scc.scc--cols-4 {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .scc.scc--cols-5 {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .scc.scc--cols-6 {
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .scc.scc--cols-7 {
+    -ms-grid-columns: (1fr)[7];
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .scc.scc--cols-8 {
+    -ms-grid-columns: (1fr)[8];
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .scc.scc--cols-9 {
+    -ms-grid-columns: (1fr)[9];
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .scc.scc--cols-10 {
+    -ms-grid-columns: (1fr)[10];
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .scc.scc--cols-11 {
+    -ms-grid-columns: (1fr)[11];
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .scc.scc--cols-12 {
+    -ms-grid-columns: (1fr)[12];
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .scc.scc--row-gap-0 {
+    row-gap: 0px;
+  }
+  .scc.scc--col-gap-0 {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+  .scc.scc--row-gap-1 {
+    row-gap: 0.25rem;
+  }
+  .scc.scc--col-gap-1 {
+    -moz-column-gap: 0.25rem;
+         column-gap: 0.25rem;
+  }
+  .scc.scc--row-gap-1\.5 {
+    row-gap: 0.375rem;
+  }
+  .scc.scc--col-gap-1\.5 {
+    -moz-column-gap: 0.375rem;
+         column-gap: 0.375rem;
+  }
+  .scc.scc--row-gap-2 {
+    row-gap: 0.5rem;
+  }
+  .scc.scc--col-gap-2 {
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+  }
+  .scc.scc--row-gap-2\.5 {
+    row-gap: 0.625rem;
+  }
+  .scc.scc--col-gap-2\.5 {
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
+  }
+  .scc.scc--row-gap-3 {
+    row-gap: 0.75rem;
+  }
+  .scc.scc--col-gap-3 {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+  }
+  .scc.scc--row-gap-3\.5 {
+    row-gap: 0.875rem;
+  }
+  .scc.scc--col-gap-3\.5 {
+    -moz-column-gap: 0.875rem;
+         column-gap: 0.875rem;
+  }
+  .scc.scc--row-gap-4 {
+    row-gap: 1rem;
+  }
+  .scc.scc--col-gap-4 {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+  .scc.scc--row-gap-5 {
+    row-gap: 1.25rem;
+  }
+  .scc.scc--col-gap-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+  .scc.scc--row-gap-6 {
+    row-gap: 1.5rem;
+  }
+  .scc.scc--col-gap-6 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .scc.scc--row-gap-7 {
+    row-gap: 1.75rem;
+  }
+  .scc.scc--col-gap-7 {
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
+  }
+  .scc.scc--row-gap-8 {
+    row-gap: 2rem;
+  }
+  .scc.scc--col-gap-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/column/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+.sc-column {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

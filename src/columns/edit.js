@@ -1,7 +1,8 @@
 import { __ } from '@wordpress/i18n';
 
 import {
-	useBlockProps, __experimentalUseInnerBlocksProps as useInnerBlocksProps, InspectorControls
+	useBlockProps, __experimentalUseInnerBlocksProps as useInnerBlocksProps, InspectorControls,
+	BlockControls, BlockVerticalAlignmentToolbar
 } from '@wordpress/block-editor';
 import { PanelBody, RangeControl, CustomSelectControl } from "@wordpress/components";
 import { useCallback } from "@wordpress/element"
@@ -63,6 +64,7 @@ const gapOptions = [
 export default function Edit({ setAttributes, attributes }) {
 	const classes = classNames({
 		'scc': true,
+		[`scc--items-${attributes.verticalAlignment}`]: !!attributes.verticalAlignment,
 		[`scc--cols-${attributes.desktop.columnsAmount}`]: !!attributes.desktop.columnsAmount,
 		[`scc--row-gap-${attributes.desktop.rowGap}`]: !!attributes.desktop.rowGap,
 		[`scc--col-gap-${attributes.desktop.columnGap}`]: !!attributes.desktop.columnGap,
@@ -108,6 +110,14 @@ export default function Edit({ setAttributes, attributes }) {
 
 	return (
 		<>
+			<BlockControls>
+				<BlockVerticalAlignmentToolbar
+					onChange={(val) => setAttributes({
+						verticalAlignment: val
+					})}
+					value={attributes.verticalAlignment}
+				/>
+			</BlockControls>
 			<InspectorControls>
 				<Panel title={__("Desktop Settings (>=1024px)", "simple-columns")} type="desktop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
 				<Panel title={__("Laptop Settings (>=768px)", "simple-columns")} type="laptop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />

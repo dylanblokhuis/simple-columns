@@ -4,6 +4,18 @@
 	display: grid;
 	grid-template-columns: 1fr;
 
+	&.scc--items-top {
+		align-items: flex-start;
+	}
+
+	&.scc--items-center {
+		align-items: center;
+	}
+
+	&.scc--items-bottom {
+		align-items: flex-end;
+	}
+
 	@for $size from 1 through $maxCols {
 		&.phone\:scc--cols-#{$size} {
 			grid-template-columns: repeat($size, 1fr);

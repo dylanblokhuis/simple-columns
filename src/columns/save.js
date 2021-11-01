@@ -6,6 +6,7 @@ import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 export default function save({ attributes }) {
 	const classes = classNames({
 		'scc': true,
+		[`scc--items-${attributes.verticalAlignment}`]: !!attributes.verticalAlignment,
 		[`scc--cols-${attributes.desktop.columnsAmount}`]: !!attributes.desktop.columnsAmount,
 		[`scc--row-gap-${attributes.desktop.rowGap}`]: !!attributes.desktop.rowGap,
 		[`scc--col-gap-${attributes.desktop.columnGap}`]: !!attributes.desktop.columnGap,

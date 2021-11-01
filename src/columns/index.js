@@ -1,6 +1,6 @@
 import { registerBlockType } from '@wordpress/blocks';
+import { select, subscribe } from '@wordpress/data';
 import './style.scss';
-
 /**
  * Internal dependencies
  */
@@ -35,6 +35,9 @@ registerBlockType('simple-columns/columns', {
 	 */
 	save,
 	attributes: {
+		verticalAlignment: {
+			type: "string"
+		},
 		desktop: {
 			type: 'object',
 			default: {
@@ -73,3 +76,25 @@ registerBlockType('simple-columns/columns', {
 		}
 	}
 });
+
+// subscribe(() => {
+// 	const editorFns = select('core/editor')
+// 	if (!editorFns) {
+// 		return;
+// 	}
+
+// 	const isSavingPost = editorFns.isSavingPost();
+// 	const isAutosavingPost = editorFns.isAutosavingPost();
+
+// 	if (isAutosavingPost) {
+// 		return
+// 	}
+
+// 	if (!isSavingPost) {
+// 		return;
+// 	}
+
+// 	console.log("Generate css");
+
+// 	// Do action.
+// });
