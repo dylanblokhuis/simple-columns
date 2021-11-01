@@ -3,9 +3,8 @@
 	"name": "simple-columns/columns",
 	"version": "0.1.0",
 	"title": "Simple Columns",
-	"category": "widgets",
+	"category": "design",
 	"icon": "columns",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
 	"supports": {
 		"html": false
 	},

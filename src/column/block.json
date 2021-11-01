@@ -3,9 +3,9 @@
 	"name": "simple-columns/column",
 	"version": "0.1.0",
 	"title": "Simple Column",
-	"category": "widgets",
+	"parent": [ "simple-columns/columns" ],
+	"category": "design",
 	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
 	"supports": {
 		"html": false
 	},

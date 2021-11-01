@@ -1,4 +1,5 @@
 import { registerBlockType } from '@wordpress/blocks';
+import { column as icon } from '@wordpress/icons';
 import './style.scss';
 
 import Edit from './edit';
@@ -30,8 +31,12 @@ const attributes = {
 registerBlockType('simple-columns/column', {
 	edit: Edit,
 	save: Save,
+	icon,
 
 	attributes: {
+		color: {
+			type: "string"
+		},
 		backgroundColor: {
 			type: "string"
 		},

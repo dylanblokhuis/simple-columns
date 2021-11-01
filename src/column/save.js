@@ -7,6 +7,7 @@ export default function Save({ attributes }) {
 	const classes = classNames({
 		'scc-col': true,
 		[`has-${attributes.backgroundColor}-background-color`]: !!attributes.backgroundColor,
+		[`has-${attributes.color}-color`]: !!attributes.color,
 		[`scc--span-${attributes.desktop.span}`]: !!attributes.desktop.span,
 		[`scc-p-t-${attributes.desktop.paddingTop}`]: !!attributes.desktop.paddingTop,
 		[`scc-p-r-${attributes.desktop.paddingRight}`]: !!attributes.desktop.paddingRight,

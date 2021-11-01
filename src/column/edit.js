@@ -2,17 +2,18 @@ import { __ } from '@wordpress/i18n';
 
 import { useBlockProps, __experimentalUseInnerBlocksProps as useInnerBlocksProps, InnerBlocks, store, InspectorControls, getColorObjectByColorValue, PanelColorSettings } from '@wordpress/block-editor';
 import { useCallback } from '@wordpress/element';
-import { useSelect, select } from '@wordpress/data';
+import { useSelect } from '@wordpress/data';
 import classNames from 'classnames';
 
 import './editor.scss';
-import { CustomSelectControl, PanelBody, RangeControl, __experimentalBoxControl as BoxControl } from '@wordpress/components';
+import { CustomSelectControl, PanelBody, RangeControl } from '@wordpress/components';
 import { UTILITIES } from '../constants';
 
 export default function Edit({ clientId, attributes, setAttributes }) {
 	const classes = classNames({
 		'scc-col': true,
 		[`has-${attributes.backgroundColor}-background-color`]: !!attributes.backgroundColor,
+		[`has-${attributes.color}-color`]: !!attributes.color,
 		[`scc--span-${attributes.desktop.span}`]: !!attributes.desktop.span,
 		[`scc-p-t-${attributes.desktop.paddingTop}`]: !!attributes.desktop.paddingTop,
 		[`scc-p-r-${attributes.desktop.paddingRight}`]: !!attributes.desktop.paddingRight,
@@ -75,13 +76,13 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 		[attributes],
 	)
 
-	const setBackgroundColorAttr = useCallback(
-		(hex) => {
+	const setColorAttr = useCallback(
+		(key, hex) => {
 			const object = getColorObjectByColorValue(colors, hex);
-			const backgroundColorClass = object ? `${object.slug}` : undefined;
+			const colorClass = object ? `${object.slug}` : undefined;
 
 			setAttributes({
-				backgroundColor: backgroundColorClass
+				[key]: colorClass
 			})
 		},
 		[attributes],
@@ -96,7 +97,14 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						{
 							label: __("Background color", "simple-columns"),
 							value: colors.find(it => it.slug === attributes.backgroundColor)?.color,
-							onChange: (val) => setBackgroundColorAttr(val),
+							onChange: (val) => setColorAttr("backgroundColor", val),
+							disableCustomColors: true,
+							clearable: true
+						},
+						{
+							label: __("Text color", "simple-columns"),
+							value: colors.find(it => it.slug === attributes.color)?.color,
+							onChange: (val) => setColorAttr("color", val),
 							disableCustomColors: true,
 							clearable: true
 						}

@@ -31,6 +31,7 @@ function Edit({ clientId, setAttributes, attributes }) {
 	const classes = classNames({
 		'scc': true,
 		[`has-${attributes.backgroundColor}-background-color`]: !!attributes.backgroundColor,
+		[`has-${attributes.color}-color`]: !!attributes.color,
 		[`scc--items-${attributes.verticalAlignment}`]: !!attributes.verticalAlignment,
 		[`scc--cols-${attributes.desktop.columnsAmount}`]: !!attributes.desktop.columnsAmount,
 		[`scc--row-gap-${attributes.desktop.rowGap}`]: !!attributes.desktop.rowGap,
@@ -74,13 +75,13 @@ function Edit({ clientId, setAttributes, attributes }) {
 		[attributes],
 	)
 
-	const setBackgroundColorAttr = useCallback(
-		(hex) => {
+	const setColorAttr = useCallback(
+		(key, hex) => {
 			const object = getColorObjectByColorValue(colors, hex);
-			const backgroundColorClass = object ? `${object.slug}` : undefined;
+			const colorClass = object ? `${object.slug}` : undefined;
 
 			setAttributes({
-				backgroundColor: backgroundColorClass
+				[key]: colorClass
 			})
 		},
 		[attributes],
@@ -103,7 +104,14 @@ function Edit({ clientId, setAttributes, attributes }) {
 						{
 							label: __("Background color", "simple-columns"),
 							value: colors.find(it => it.slug === attributes.backgroundColor)?.color,
-							onChange: (val) => setBackgroundColorAttr(val),
+							onChange: (val) => setColorAttr("backgroundColor", val),
+							disableCustomColors: true,
+							clearable: true
+						},
+						{
+							label: __("Text color", "simple-columns"),
+							value: colors.find(it => it.slug === attributes.color)?.color,
+							onChange: (val) => setColorAttr("color", val),
 							disableCustomColors: true,
 							clearable: true
 						}

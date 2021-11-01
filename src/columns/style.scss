@@ -5,7 +5,7 @@
 	grid-template-columns: 1fr;
 
 	&.scc--items-equal {
-		align-items: baseline;
+		align-items: stretch;
 	}
 
 	&.scc--items-top {
