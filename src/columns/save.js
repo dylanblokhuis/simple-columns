@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { useBlockProps, InnerBlocks, getColorObjectByColorValue } from '@wordpress/block-editor';
 
-export default function save({ attributes }) {
+export default function Save({ attributes }) {
 	const classes = classNames({
 		'scc': true,
 		[`has-${attributes.backgroundColor}-background-color`]: !!attributes.backgroundColor,

@@ -1,11 +1,14 @@
 import { registerBlockType } from '@wordpress/blocks';
 import './style.scss';
 
-/**
- * Internal dependencies
- */
 import Edit from './edit';
-import save from './save';
+import Save from './save';
+
+const attributes = {
+	span: {
+		type: 'string'
+	}
+}
 
 /**
  * Every block starts by registering a new block type definition.
@@ -13,13 +16,37 @@ import save from './save';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType('simple-columns/column', {
-	/**
-	 * @see ./edit.js
-	 */
 	edit: Edit,
+	save: Save,
 
-	/**
-	 * @see ./save.js
-	 */
-	save,
+	attributes: {
+		desktop: {
+			type: 'object',
+			default: {
+				span: 1,
+			},
+			...attributes
+		},
+		laptop: {
+			type: 'object',
+			default: {
+				span: undefined,
+			},
+			...attributes
+		},
+		tablet: {
+			type: 'object',
+			default: {
+				span: undefined,
+			},
+			...attributes
+		},
+		phone: {
+			type: 'object',
+			default: {
+				span: undefined,
+			},
+			...attributes
+		},
+	}
 });

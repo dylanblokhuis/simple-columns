@@ -1,3 +1,35 @@
-.sc-column {
+@import "../variables";
+
+.scc-col {
 	width: 100%;
+
+	@for $size from 1 through $maxCols {
+		&.phone\:scc--span-#{$size} {
+			grid-column: span $size / span $size;
+		}
+	}
+
+	@media (min-width: 640px) {
+		@for $size from 1 through $maxCols {
+			&.tablet\:scc--span-#{$size} {
+				grid-column: span $size / span $size;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		@for $size from 1 through $maxCols {
+			&.laptop\:scc--span-#{$size} {
+				grid-column: span $size / span $size;
+			}
+		}
+	}
+
+	@media (min-width: 1024px) {
+		@for $size from 1 through $maxCols {
+			&.scc--span-#{$size} {
+				grid-column: span $size / span $size;
+			}
+		}
+	}
 }

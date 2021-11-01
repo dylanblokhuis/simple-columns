@@ -5,7 +5,7 @@ import './style.scss';
  * Internal dependencies
  */
 import Edit from './edit';
-import save from './save';
+import Save from './save';
 
 const attributes = {
 	columnsAmount: {
@@ -25,15 +25,9 @@ const attributes = {
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType('simple-columns/columns', {
-	/**
-	 * @see ./edit.js
-	 */
 	edit: Edit,
+	save: Save,
 
-	/**
-	 * @see ./save.js
-	 */
-	save,
 	attributes: {
 		backgroundColor: {
 			type: "string"

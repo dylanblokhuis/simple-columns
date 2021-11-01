@@ -40,7 +40,6 @@ function Edit({ setAttributes, attributes }) {
 		[`phone:scc--col-gap-${attributes.phone.columnGap}`]: !!attributes.phone.columnGap,
 	})
 
-	console.log(attributes, classes);
 	const blockProps = useBlockProps({
 		className: classes
 	});
