@@ -4,7 +4,6 @@ import {
 	__experimentalUseInnerBlocksProps as useInnerBlocksProps,
 	InspectorControls,
 	BlockControls,
-	withColors,
 	PanelColorSettings,
 	getColorObjectByColorValue,
 } from '@wordpress/block-editor';
@@ -143,4 +142,4 @@ function ColumnsPanel({ title, type, attributes, setResponsiveAttributes }) {
 	)
 }
 
-export default withColors('backgroundColor')(Edit);
+export default Edit
