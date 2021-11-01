@@ -29,7 +29,7 @@ const POPOVER_PROPS = {
   isAlternate: true,
 };
 
-function BlockVerticalAlignmentUI({
+function ColumnsVerticalAlignment({
   value,
   onChange,
   controls = DEFAULT_CONTROLS,
@@ -68,4 +68,4 @@ function BlockVerticalAlignmentUI({
   );
 }
 
-export default BlockVerticalAlignmentUI;
+export default ColumnsVerticalAlignment;

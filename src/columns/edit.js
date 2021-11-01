@@ -14,7 +14,7 @@ import { useCallback, useMemo } from "@wordpress/element"
 import classNames from 'classnames';
 import { UTILITIES } from '../constants';
 import './editor.scss';
-import BlockVerticalAlignmentUI from './toolbar';
+import ColumnsVerticalAlignment from './toolbar/column-vertical-alignment';
 
 function Edit({ setAttributes, attributes }) {
 	const settings = useMemo(() => select('core/editor').getEditorSettings(), [])
@@ -81,8 +81,7 @@ function Edit({ setAttributes, attributes }) {
 	return (
 		<>
 			<BlockControls>
-				{/* TODO: Create custom toolbar with equal height columns option */}
-				<BlockVerticalAlignmentUI
+				<ColumnsVerticalAlignment
 					onChange={(val) => setAttributes({
 						verticalAlignment: val
 					})}
