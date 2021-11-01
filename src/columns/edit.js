@@ -100,6 +100,7 @@ function Edit({ clientId, setAttributes, attributes }) {
 			<InspectorControls>
 				<PanelColorSettings
 					title={__("Color", "simple-columns")}
+					initialOpen={false}
 					colorSettings={[
 						{
 							label: __("Background color", "simple-columns"),

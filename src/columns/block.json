@@ -6,7 +6,9 @@
 	"category": "design",
 	"icon": "columns",
 	"supports": {
-		"html": false
+		"html": false,
+		"anchor": true,
+		"align": ["wide", "full", "center"]
 	},
 	"textdomain": "simple-columns",
 	"editorStyle": "file:../../build/index.css",

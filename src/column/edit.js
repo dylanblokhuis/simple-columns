@@ -72,6 +72,20 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 					[key]: value
 				}
 			})
+
+			// if not filled, fill in mobile
+			if (type !== "desktop") {
+				return
+			}
+
+			if (!attributes.phone[key] || attributes.phone[key] === attributes.desktop[key]) {
+				setAttributes({
+					phone: {
+						...attributes.phone,
+						[key]: value
+					}
+				})
+			}
 		},
 		[attributes],
 	)
@@ -93,6 +107,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 			<InspectorControls>
 				<PanelColorSettings
 					title={__("Color", "simple-columns")}
+					initialOpen={false}
 					colorSettings={[
 						{
 							label: __("Background color", "simple-columns"),
@@ -110,7 +125,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						}
 					]}
 				/>
-				<ColumnPanel title={__("Desktop Settings (>=1024px)", "simple-columns")} type="desktop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
+				<ColumnPanel title={__("Desktop Settings (>=1024px)", "simple-columns")} description={__("Desktop settings copy to mobile by default, unless modified", "simple-columns")} type="desktop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
 				<ColumnPanel title={__("Laptop Settings (>=768px)", "simple-columns")} type="laptop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
 				<ColumnPanel title={__("Tablet Settings (>=640px)", "simple-columns")} type="tablet" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
 				<ColumnPanel title={__("Phone Settings (<640px)", "simple-columns")} type="phone" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
@@ -121,9 +136,10 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 	);
 }
 
-function ColumnPanel({ title, type, attributes, setResponsiveAttributes }) {
+function ColumnPanel({ title, description, type, attributes, setResponsiveAttributes }) {
 	return (
 		<PanelBody title={title} initialOpen={type === "desktop"}>
+			{!!description && <p>{description}</p>}
 			<RangeControl
 				label={__("Column span", "simple-columns")}
 				value={attributes[type].span}

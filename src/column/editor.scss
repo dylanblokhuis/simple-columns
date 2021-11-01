@@ -5,6 +5,10 @@
 	margin-bottom: 0 !important;
 }
 
+.wp-block[data-align="full"] .wp-block-simple-columns-column {
+	max-width: unset !important;
+}
+
 .sc-padding-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
