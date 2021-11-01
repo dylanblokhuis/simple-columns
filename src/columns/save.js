@@ -1,11 +1,13 @@
 import { __ } from '@wordpress/i18n';
+import { select } from "@wordpress/data"
 import classNames from 'classnames';
 
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks, getColorObjectByColorValue } from '@wordpress/block-editor';
 
 export default function save({ attributes }) {
 	const classes = classNames({
 		'scc': true,
+		[`has-${attributes.backgroundColor}-background-color`]: !!attributes.backgroundColor,
 		[`scc--items-${attributes.verticalAlignment}`]: !!attributes.verticalAlignment,
 		[`scc--cols-${attributes.desktop.columnsAmount}`]: !!attributes.desktop.columnsAmount,
 		[`scc--row-gap-${attributes.desktop.rowGap}`]: !!attributes.desktop.rowGap,

@@ -1,69 +1,28 @@
 import { __ } from '@wordpress/i18n';
-
 import {
-	useBlockProps, __experimentalUseInnerBlocksProps as useInnerBlocksProps, InspectorControls,
-	BlockControls, BlockVerticalAlignmentToolbar
+	useBlockProps,
+	__experimentalUseInnerBlocksProps as useInnerBlocksProps,
+	InspectorControls,
+	BlockControls,
+	BlockVerticalAlignmentToolbar,
+	withColors,
+	PanelColorSettings,
+	getColorObjectByColorValue,
 } from '@wordpress/block-editor';
+import { select } from "@wordpress/data"
 import { PanelBody, RangeControl, CustomSelectControl } from "@wordpress/components";
-import { useCallback } from "@wordpress/element"
+import { useCallback, useMemo } from "@wordpress/element"
 
-import './editor.scss';
 import classNames from 'classnames';
+import { UTILITIES } from '../constants';
+import './editor.scss';
 
-const gapOptions = [
-	{
-		key: "0",
-		name: "0px",
-	},
-	{
-		key: "1",
-		name: "0.25rem"
-	},
-	{
-		key: "1.5",
-		name: "0.375rem"
-	},
-	{
-		key: "2",
-		name: "0.5rem"
-	},
-	{
-		key: "2.5",
-		name: "0.625rem"
-	},
-	{
-		key: "3",
-		name: "0.75rem"
-	},
-	{
-		key: "3.5",
-		name: "0.875rem"
-	},
-	{
-		key: "4",
-		name: "1rem"
-	},
-	{
-		key: "5",
-		name: "1.25rem"
-	},
-	{
-		key: "6",
-		name: "1.5rem"
-	},
-	{
-		key: "7",
-		name: "1.75rem"
-	},
-	{
-		key: "8",
-		name: "2rem"
-	},
-]
+function Edit({ setAttributes, attributes }) {
+	const settings = useMemo(() => select('core/editor').getEditorSettings(), [])
 
-export default function Edit({ setAttributes, attributes }) {
 	const classes = classNames({
 		'scc': true,
+		[`has-${attributes.backgroundColor}-background-color`]: !!attributes.backgroundColor,
 		[`scc--items-${attributes.verticalAlignment}`]: !!attributes.verticalAlignment,
 		[`scc--cols-${attributes.desktop.columnsAmount}`]: !!attributes.desktop.columnsAmount,
 		[`scc--row-gap-${attributes.desktop.rowGap}`]: !!attributes.desktop.rowGap,
@@ -89,6 +48,13 @@ export default function Edit({ setAttributes, attributes }) {
 
 	const template = [...new Array(attributes.desktop.columnsAmount)].map(() => ["simple-columns/column", {}])
 
+	const innerBlocksProps = useInnerBlocksProps(blockProps, {
+		allowedBlocks: ["simple-columns/column"],
+		template: template,
+		orientation: 'horizontal',
+		renderAppender: false,
+	});
+
 	const setResponsiveAttributes = useCallback(
 		(type, key, value) => {
 			setAttributes({
@@ -101,16 +67,22 @@ export default function Edit({ setAttributes, attributes }) {
 		[attributes],
 	)
 
-	const innerBlocksProps = useInnerBlocksProps(blockProps, {
-		allowedBlocks: ["simple-columns/column"],
-		template: template,
-		orientation: 'horizontal',
-		renderAppender: false,
-	});
+	const setBackgroundColorAttr = useCallback(
+		(hex) => {
+			const object = getColorObjectByColorValue(settings.colors, hex);
+			const backgroundColorClass = object ? `${object.slug}` : undefined;
+
+			setAttributes({
+				backgroundColor: backgroundColorClass
+			})
+		},
+		[attributes],
+	)
 
 	return (
 		<>
 			<BlockControls>
+				{/* TODO: Create custom toolbar with equal height columns option */}
 				<BlockVerticalAlignmentToolbar
 					onChange={(val) => setAttributes({
 						verticalAlignment: val
@@ -119,12 +91,22 @@ export default function Edit({ setAttributes, attributes }) {
 				/>
 			</BlockControls>
 			<InspectorControls>
-				<Panel title={__("Desktop Settings (>=1024px)", "simple-columns")} type="desktop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
-				<Panel title={__("Laptop Settings (>=768px)", "simple-columns")} type="laptop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
-				<Panel title={__("Tablet Settings (>=640px)", "simple-columns")} type="tablet" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
-				<Panel title={__("Phone Settings (<640px)", "simple-columns")} type="phone" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
-
-				{/* <PanelBody title="Dimensies"></PanelBody> */}
+				<PanelColorSettings
+					title={__("Color", "simple-columns")}
+					colorSettings={[
+						{
+							label: __("Background color", "simple-columns"),
+							value: settings.colors.find(it => it.slug === attributes.backgroundColor)?.color,
+							onChange: (val) => setBackgroundColorAttr(val),
+							disableCustomColors: true,
+							clearable: true
+						}
+					]}
+				/>
+				<ColumnsPanel title={__("Desktop Settings (>=1024px)", "simple-columns")} type="desktop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
+				<ColumnsPanel title={__("Laptop Settings (>=768px)", "simple-columns")} type="laptop" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
+				<ColumnsPanel title={__("Tablet Settings (>=640px)", "simple-columns")} type="tablet" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
+				<ColumnsPanel title={__("Phone Settings (<640px)", "simple-columns")} type="phone" attributes={attributes} setResponsiveAttributes={setResponsiveAttributes} />
 			</InspectorControls>
 
 			<div {...innerBlocksProps} />
@@ -132,7 +114,7 @@ export default function Edit({ setAttributes, attributes }) {
 	);
 }
 
-function Panel({ title, type, attributes, setResponsiveAttributes }) {
+function ColumnsPanel({ title, type, attributes, setResponsiveAttributes }) {
 	return (
 		<PanelBody title={title} initialOpen={type === "desktop"}>
 			<RangeControl
@@ -141,20 +123,24 @@ function Panel({ title, type, attributes, setResponsiveAttributes }) {
 				onChange={(val) => setResponsiveAttributes(type, "columnsAmount", val)}
 				min={1}
 				max={12}
+				allowReset
 			/>
+
 			<CustomSelectControl
-				options={gapOptions}
+				options={UTILITIES}
 				label={__("Row gap size", "simple-columns")}
-				value={gapOptions.find(it => it.key === attributes[type].rowGap)}
+				value={UTILITIES.find(it => it.key === attributes[type].rowGap)}
 				onChange={({ selectedItem }) => setResponsiveAttributes(type, "rowGap", selectedItem.key)}
 			/>
 			<br />
 			<CustomSelectControl
-				options={gapOptions}
+				options={UTILITIES}
 				label={__("Column gap size", "simple-columns")}
-				value={gapOptions.find(it => it.key === attributes[type].columnGap)}
+				value={UTILITIES.find(it => it.key === attributes[type].columnGap)}
 				onChange={({ selectedItem }) => setResponsiveAttributes(type, "columnGap", selectedItem.key)}
 			/>
 		</PanelBody>
 	)
 }
+
+export default withColors('backgroundColor')(Edit);

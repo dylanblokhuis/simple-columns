@@ -1,5 +1,5 @@
 import { registerBlockType } from '@wordpress/blocks';
-import { select, subscribe } from '@wordpress/data';
+// import { select, subscribe } from '@wordpress/data';
 import './style.scss';
 /**
  * Internal dependencies
@@ -35,6 +35,9 @@ registerBlockType('simple-columns/columns', {
 	 */
 	save,
 	attributes: {
+		backgroundColor: {
+			type: "string"
+		},
 		verticalAlignment: {
 			type: "string"
 		},

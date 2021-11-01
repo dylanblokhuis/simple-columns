@@ -1,4 +1,4 @@
-@import "./variables";
+@import "../variables";
 
 .scc {
 	display: grid;
@@ -22,7 +22,7 @@
 		}
 	}
 
-	@each $tag, $value in $gapOptions {
+	@each $tag, $value in $utilities {
 		&.phone\:scc--row-gap-#{$tag} {
 			row-gap: $value;
 		}
@@ -40,7 +40,7 @@
 			}
 		}
 
-		@each $tag, $value in $gapOptions {
+		@each $tag, $value in $utilities {
 			&.tablet\:scc--row-gap-#{$tag} {
 				row-gap: $value;
 			}
@@ -59,7 +59,7 @@
 			}
 		}
 
-		@each $tag, $value in $gapOptions {
+		@each $tag, $value in $utilities {
 			&.laptop\:scc--row-gap-#{$tag} {
 				row-gap: $value;
 			}
@@ -77,7 +77,7 @@
 			}
 		}
 
-		@each $tag, $value in $gapOptions {
+		@each $tag, $value in $utilities {
 			&.scc--row-gap-#{$tag} {
 				row-gap: $value;
 			}
