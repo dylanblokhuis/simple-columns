@@ -1,7 +1,7 @@
 import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
-	__experimentalUseInnerBlocksProps as useInnerBlocksProps,
+	useInnerBlocksProps,
 	InspectorControls,
 	BlockControls,
 	PanelColorSettings,

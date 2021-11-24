@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 
-import { useBlockProps, __experimentalUseInnerBlocksProps as useInnerBlocksProps, InnerBlocks, store, InspectorControls, getColorObjectByColorValue, PanelColorSettings } from '@wordpress/block-editor';
+import { useBlockProps, useInnerBlocksProps, InnerBlocks, store, InspectorControls, getColorObjectByColorValue, PanelColorSettings } from '@wordpress/block-editor';
 import { useCallback } from '@wordpress/element';
 import { useSelect } from '@wordpress/data';
 import classNames from 'classnames';
